@@ -7,3 +7,4 @@ Algorithms Implemented
 * Insertion Sort – [documentation](https://en.wikipedia.org/wiki/Insertion_sort)
 * Merge Sort – [documentation](https://en.wikipedia.org/wiki/Merge_sort)
 * QuickSort – [documentation](https://en.wikipedia.org/wiki/Quicksort)
+* CountingSort – [documentation](https://en.wikipedia.org/wiki/Counting_sort)

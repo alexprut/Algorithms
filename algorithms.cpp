@@ -147,10 +147,49 @@ void quickSortTest() {
     }
 }
 
+void countingSort(vector<int> &numbers, int k) {
+    vector<int> counting(k);
+    vector<int> ordered(numbers.size());
+
+    for (int i = 0; i <= k; i++) {
+        counting[i] = 0;
+    }
+
+    for (int i = 0; i < numbers.size(); i++) {
+        counting[numbers[i]] += 1;
+    }
+
+    for (int i = 1; i <= k; i++) {
+        counting[i] += counting[i - 1];
+    }
+
+    for (int i = ((int) numbers.size() - 1); i >= 0; i--) {
+        int value = numbers[i];
+        ordered[counting[value]] = value;
+        counting[value] -= 1;
+    }
+
+    numbers = ordered;
+
+}
+
+void countingSortTest() {
+    vector<int> numbers = {4, 5, 0, 1, 6, 2, 10, 22, 44, 33};
+
+    countingSort(numbers, 33);
+
+    cout << "CountingSort \n";
+
+    for (int n : numbers) {
+        cout << n << "\n";
+    }
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
     mergeTest();
     mergeSortTest();
     quickSortTest();
+    countingSortTest();
 }
