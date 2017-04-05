@@ -1,13 +1,19 @@
 Algorithms
 ==========
+Classic Algorithms (graph, sorting, ...), implemented in C++
+
 _Code written for practice. During my Master's degree in Computer Science at the University of Udine._
 
 Algorithms Implemented
 ======================
-* Insertion Sort – [documentation](https://en.wikipedia.org/wiki/Insertion_sort)
-* Merge Sort – [documentation](https://en.wikipedia.org/wiki/Merge_sort)
-* QuickSort – [documentation](https://en.wikipedia.org/wiki/Quicksort)
-* CountingSort – [documentation](https://en.wikipedia.org/wiki/Counting_sort)
+
+|Algorithm|Cost|Cost worst-case|
+|---|---|---|
+|[Insertion Sort](https://github.com/alexprut/Algorithms/blob/master/tests/insertionSort.cpp)|O(n^2)|O(n^2)|
+|[Merge Sort](https://github.com/alexprut/Algorithms/blob/master/tests/mergeSort.cpp)|Θ(nlogn)|Θ(nlogn)|
+|[QuickSort](https://github.com/alexprut/Algorithms/blob/master/tests/quickSort.cpp)|O(nlogn)|O(n^2)|
+|[Counting Sort](https://github.com/alexprut/Algorithms/blob/master/tests/quickSort.cpp)| | |
+
 
 License
 =======
