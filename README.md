@@ -1,5 +1,7 @@
 Algorithms
 ==========
+[![MIT](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/alexprut/Algorithms/blob/master/LICENSE)
+
 Classic Algorithms (graph, sorting, ...), implemented in C++
 
 _Code written for practice. During my Master's degree in Computer Science at the University of Udine._
@@ -13,6 +15,7 @@ Algorithms Implemented
 |[Merge Sort](https://github.com/alexprut/Algorithms/blob/master/mergeSort.cpp)|Θ(nlogn)|Θ(nlogn)|
 |[QuickSort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)|O(nlogn)|O(n^2)|
 |[Counting Sort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)| | |
+|[Binary Search](https://github.com/alexprut/Algorithms/blob/master/binarySearch.cpp)|O(logn)|O(logn)|
 
 
 License

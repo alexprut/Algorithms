@@ -4,6 +4,7 @@
 #include "../mergeSort.cpp"
 #include "../quickSort.cpp"
 #include "../insertionSort.cpp"
+#include "../binarySearch.cpp"
 
 using namespace std;
 
@@ -92,6 +93,15 @@ void countingSortTest() {
     cout << "\n";
 }
 
+void binarySearchTest() {
+    vector<int> numbers = {1,2,3,4,5,6,7,8};
+
+    cout << "BinarySearch \n";
+
+    cout << binarySearch(numbers, 3) << "\n";
+    cout << binarySearch(numbers, 11);
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -99,4 +109,5 @@ int main() {
     mergeSortTest();
     quickSortTest();
     countingSortTest();
+    binarySearchTest();
 }
