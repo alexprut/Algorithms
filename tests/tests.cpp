@@ -6,6 +6,7 @@
 #include "../insertionSort.cpp"
 #include "../binarySearch.cpp"
 #include "../bubbleSort.cpp"
+#include "../stack.cpp"
 
 using namespace std;
 
@@ -117,6 +118,21 @@ void bubbleSortTest() {
     cout << "\n";
 }
 
+void stackTest() {
+    stack s;
+
+    s.push(4);
+    s.push(3);
+    s.push(0);
+    s.push(10);
+
+    while (!s.isEmpty()) {
+        cout << s.pop() << " ";
+    }
+
+    cout << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -126,4 +142,5 @@ int main() {
     countingSortTest();
     binarySearchTest();
     bubbleSortTest();
+    stackTest();
 }

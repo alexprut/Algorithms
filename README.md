@@ -18,6 +18,9 @@ Algorithms Implemented
 |[Binary Search](https://github.com/alexprut/Algorithms/blob/master/binarySearch.cpp)|O(logn)|O(logn)|
 |[Bubble Sort](https://github.com/alexprut/Algorithms/blob/master/bubbleSort.cpp)|O(n^2)|O(n^2)|
 
+Data Structures Implemented
+===========================
+* [Stack](https://github.com/alexprut/Algorithms/blob/master/stack.cpp)
 
 License
 =======
