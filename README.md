@@ -16,6 +16,7 @@ Algorithms Implemented
 |[QuickSort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)|O(nlogn)|O(n^2)|
 |[Counting Sort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)| | |
 |[Binary Search](https://github.com/alexprut/Algorithms/blob/master/binarySearch.cpp)|O(logn)|O(logn)|
+|[Bubble Sort](https://github.com/alexprut/Algorithms/blob/master/bubbleSort.cpp)|O(n^2)|O(n^2)|
 
 
 License

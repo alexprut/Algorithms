@@ -5,6 +5,7 @@
 #include "../quickSort.cpp"
 #include "../insertionSort.cpp"
 #include "../binarySearch.cpp"
+#include "../bubbleSort.cpp"
 
 using namespace std;
 
@@ -99,7 +100,21 @@ void binarySearchTest() {
     cout << "BinarySearch \n";
 
     cout << binarySearch(numbers, 3) << "\n";
-    cout << binarySearch(numbers, 11);
+    cout << binarySearch(numbers, 11) << "\n";
+}
+
+void bubbleSortTest() {
+    vector<int> numbers = {4, 5, 0, 1, 6, 2, 10, 22, 44, 33, 0};
+
+    bubbleSort(numbers);
+
+    cout << "BubbleSort \n";
+
+    for (int n : numbers) {
+        cout << n << " ";
+    }
+
+    cout << "\n";
 }
 
 int main() {
@@ -110,4 +125,5 @@ int main() {
     quickSortTest();
     countingSortTest();
     binarySearchTest();
+    bubbleSortTest();
 }
