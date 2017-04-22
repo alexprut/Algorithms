@@ -7,6 +7,7 @@
 #include "../binarySearch.cpp"
 #include "../bubbleSort.cpp"
 #include "../stack.cpp"
+#include "../binarySearchTree.cpp"
 
 using namespace std;
 
@@ -133,6 +134,35 @@ void stackTest() {
     cout << "\n";
 }
 
+void binarySearchTreeTest() {
+    cout << "Binary Search Tree \n";
+
+    BST bst;
+    bst.insert(4);
+    bst.insert(5);
+    bst.insert(1);
+    bst.insert(0);
+    bst.insert(9);
+    bst.insert(9);
+    bst.insert(10);
+    bst.insert(18);
+    bst.print();
+
+    if (bst.search(10) != NULL) {
+        cout << "Found Value\n";
+    } else {
+        cout << "Not Found Value\n";
+    }
+
+    if (bst.search(1234) != NULL) {
+        cout << "Found Value\n";
+    } else {
+        cout << "Not Found Value\n";
+    }
+
+    cout << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -143,4 +173,5 @@ int main() {
     binarySearchTest();
     bubbleSortTest();
     stackTest();
+    binarySearchTreeTest();
 }

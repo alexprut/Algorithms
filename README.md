@@ -20,7 +20,10 @@ Algorithms Implemented
 
 Data Structures Implemented
 ===========================
-* [Stack](https://github.com/alexprut/Algorithms/blob/master/stack.cpp)
+|Data Structure|Methods|
+|--------------|-------|
+|[Stack](https://github.com/alexprut/Algorithms/blob/master/stack.cpp)| pop(), push(), top(), isEmpty()|
+|[Binary Search Tree (BST)](https://github.com/alexprut/Algorithms/blob/master/binarySearchTree.cpp)||
 
 License
 =======
