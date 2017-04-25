@@ -8,6 +8,7 @@
 #include "../bubbleSort.cpp"
 #include "../stack.cpp"
 #include "../binarySearchTree.cpp"
+#include "../binaryMaxHeap.cpp"
 
 using namespace std;
 
@@ -97,7 +98,7 @@ void countingSortTest() {
 }
 
 void binarySearchTest() {
-    vector<int> numbers = {1,2,3,4,5,6,7,8};
+    vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8};
 
     cout << "BinarySearch \n";
 
@@ -163,6 +164,27 @@ void binarySearchTreeTest() {
     cout << "\n";
 }
 
+void binaryMaxHeapTest() {
+    cout << "Binary Max Heap \n";
+
+    BinaryMaxHeap maxHeap({1, 4, 0, 123, 9, 2, 1, 12});
+
+    cout << "\n";
+}
+
+void heapSortTest() {
+    cout << "Heapsort \n";
+
+    BinaryMaxHeap heap;
+    vector<int> result = heap.heapSort({1, 4, 0, 123, 9, 2, 1, 12});
+
+    for (int i = 0; i < result.size(); i++) {
+        cout << result[i] << " ";
+    }
+
+    cout << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -174,4 +196,6 @@ int main() {
     bubbleSortTest();
     stackTest();
     binarySearchTreeTest();
+    binaryMaxHeapTest();
+    heapSortTest();
 }

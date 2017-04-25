@@ -9,7 +9,7 @@ _Code written for practice. During my Master's degree in Computer Science at the
 Algorithms Implemented
 ======================
 
-|Algorithm|Cost|Cost worst-case|
+|Algorithm|Average Cost|Worst-case Cost|
 |---|---|---|
 |[Insertion Sort](https://github.com/alexprut/Algorithms/blob/master/insertionSort.cpp)|O(n^2)|O(n^2)|
 |[Merge Sort](https://github.com/alexprut/Algorithms/blob/master/mergeSort.cpp)|Θ(nlogn)|Θ(nlogn)|
@@ -17,6 +17,7 @@ Algorithms Implemented
 |[Counting Sort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)| | |
 |[Binary Search](https://github.com/alexprut/Algorithms/blob/master/binarySearch.cpp)|O(logn)|O(logn)|
 |[Bubble Sort](https://github.com/alexprut/Algorithms/blob/master/bubbleSort.cpp)|O(n^2)|O(n^2)|
+|[Heapsort](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp#L133)|O(nlogn)|O(nlogn)|
 
 Data Structures Implemented
 ===========================
@@ -24,6 +25,7 @@ Data Structures Implemented
 |--------------|-------|
 |[Stack](https://github.com/alexprut/Algorithms/blob/master/stack.cpp)| ```pop()```, ```push()```, ```top()```, ```isEmpty()``` - O(1)|
 |[Binary Search Tree (BST)](https://github.com/alexprut/Algorithms/blob/master/binarySearchTree.cpp)|```insert(int value)```, ```search(int value)```, ```printInOrder()``` - Θ(n), ```printPreOrder()``` - Θ(n), ```printPostOrder()``` - Θ(n)|
+|[Heap (binary max heap)](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp)| ```heapify(int index)``` - O(logn), ```insert(int value)``` - O(logn), ```deleteMax()``` - O(logn), ```buildHeap(vector<int> values)``` - O(n), , ```heapSort()``` - O(nlogn)|
 
 License
 =======
