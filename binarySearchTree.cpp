@@ -1,8 +1,4 @@
-struct Node {
-    int data;
-    Node *left = NULL;
-    Node *right = NULL;
-};
+#include "node.h"
 
 class BST {
 public:
@@ -21,7 +17,11 @@ private:
 
     void printInOrder(Node *current);
 
-    Node* search(Node *current, int value);
+    void printPreOrder(Node *current);
+
+    void printPostOrder(Node *current);
+
+    Node *search(Node *current, int value);
 };
 
 
@@ -54,14 +54,26 @@ void BST::printInOrder(Node *current) {
     if (current->right != NULL) { BST::printInOrder(current->right); }
 }
 
+void BST::printPreOrder(Node *current) {
+    if (current->left != NULL) { BST::printInOrder(current->left); }
+    if (current->right != NULL) { BST::printInOrder(current->right); }
+    cout << current->data << " ";
+}
+
+void BST::printPostOrder(Node *current) {
+    cout << current->data << " ";
+    if (current->left != NULL) { BST::printInOrder(current->left); }
+    if (current->right != NULL) { BST::printInOrder(current->right); }
+}
+
 void BST::print() {
     BST::printInOrder(root);
     cout << "\n";
 }
 
-Node* BST::search(Node *current, int value) {
-    if (current == NULL) {return NULL;}
-    if (current->data == value) {return current;}
+Node *BST::search(Node *current, int value) {
+    if (current == NULL) { return NULL; }
+    if (current->data == value) { return current; }
     if (current->data > value) {
         return BST::search(current->left, value);
     } else {
@@ -69,6 +81,6 @@ Node* BST::search(Node *current, int value) {
     }
 }
 
-Node* BST::search(int value) {
+Node *BST::search(int value) {
     return BST::search(root, value);
 }

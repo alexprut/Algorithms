@@ -22,8 +22,8 @@ Data Structures Implemented
 ===========================
 |Data Structure|Methods|
 |--------------|-------|
-|[Stack](https://github.com/alexprut/Algorithms/blob/master/stack.cpp)| pop(), push(), top(), isEmpty()|
-|[Binary Search Tree (BST)](https://github.com/alexprut/Algorithms/blob/master/binarySearchTree.cpp)||
+|[Stack](https://github.com/alexprut/Algorithms/blob/master/stack.cpp)| ```pop()```, ```push()```, ```top()```, ```isEmpty()``` - O(1)|
+|[Binary Search Tree (BST)](https://github.com/alexprut/Algorithms/blob/master/binarySearchTree.cpp)|```insert(int value)```, ```search(int value)```, ```printInOrder()``` - Θ(n), ```printPreOrder()``` - Θ(n), ```printPostOrder()``` - Θ(n)|
 
 License
 =======
