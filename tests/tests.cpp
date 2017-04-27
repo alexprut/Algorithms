@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "../node.h"
 #include "../countingSort.cpp"
 #include "../mergeSort.cpp"
 #include "../quickSort.cpp"
@@ -9,6 +10,7 @@
 #include "../stack.cpp"
 #include "../binarySearchTree.cpp"
 #include "../binaryMaxHeap.cpp"
+#include "../linkedList.cpp"
 
 using namespace std;
 
@@ -121,7 +123,7 @@ void bubbleSortTest() {
 }
 
 void stackTest() {
-    stack s;
+    Stack s;
 
     s.push(4);
     s.push(3);
@@ -185,6 +187,25 @@ void heapSortTest() {
     cout << "\n";
 }
 
+void linkedListTest() {
+    cout << "Linked list \n";
+
+    LinkedList list;
+    list.insertFront(12);
+    list.insertFront(1);
+    list.insertFront(19);
+    list.insertFront(121);
+    list.deleteFront();
+
+    LinkedListNode *current = list.head;
+    while (current != NULL) {
+        cout << current->data << " ";
+        current = current->next;
+    }
+
+    cout << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -198,4 +219,5 @@ int main() {
     binarySearchTreeTest();
     binaryMaxHeapTest();
     heapSortTest();
+    linkedListTest();
 }

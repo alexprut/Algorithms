@@ -1,5 +1,8 @@
 struct Node {
     int data;
-    Node *left = NULL;
-    Node *right = NULL;
+};
+
+struct BinaryNode : Node {
+    BinaryNode *left = NULL;
+    BinaryNode *right = NULL;
 };

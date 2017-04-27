@@ -1,4 +1,4 @@
-class stack {
+class Stack {
 public:
     int pop() {
         if (topIndex != -1) {

@@ -1,42 +1,40 @@
-#include "node.h"
-
 class BST {
 public:
-    Node *root = NULL;
+    BinaryNode *root = NULL;
 
     void insert(int value);
 
     void print();
 
-    Node *search(int value);
+    BinaryNode *search(int value);
 
 private:
-    Node *createNode(int value);
+    BinaryNode *createNode(int value);
 
-    void insert(Node *&current, Node *node);
+    void insert(BinaryNode *&current, BinaryNode *node);
 
-    void printInOrder(Node *current);
+    void printInOrder(BinaryNode *current);
 
-    void printPreOrder(Node *current);
+    void printPreOrder(BinaryNode *current);
 
-    void printPostOrder(Node *current);
+    void printPostOrder(BinaryNode *current);
 
-    Node *search(Node *current, int value);
+    BinaryNode *search(BinaryNode *current, int value);
 };
 
 
-Node *BST::createNode(int value) {
-    Node *node = new Node;
+BinaryNode *BST::createNode(int value) {
+    BinaryNode *node = new BinaryNode;
     node->data = value;
     return node;
 }
 
 void BST::insert(int value) {
-    Node *node = BST::createNode(value);
+    BinaryNode *node = BST::createNode(value);
     insert(root, node);
 }
 
-void BST::insert(Node *&current, Node *node) {
+void BST::insert(BinaryNode *&current, BinaryNode *node) {
     if (current == NULL) {
         current = node;
         return;
@@ -48,19 +46,19 @@ void BST::insert(Node *&current, Node *node) {
     }
 }
 
-void BST::printInOrder(Node *current) {
+void BST::printInOrder(BinaryNode *current) {
     if (current->left != NULL) { BST::printInOrder(current->left); }
     cout << current->data << " ";
     if (current->right != NULL) { BST::printInOrder(current->right); }
 }
 
-void BST::printPreOrder(Node *current) {
+void BST::printPreOrder(BinaryNode *current) {
     if (current->left != NULL) { BST::printInOrder(current->left); }
     if (current->right != NULL) { BST::printInOrder(current->right); }
     cout << current->data << " ";
 }
 
-void BST::printPostOrder(Node *current) {
+void BST::printPostOrder(BinaryNode *current) {
     cout << current->data << " ";
     if (current->left != NULL) { BST::printInOrder(current->left); }
     if (current->right != NULL) { BST::printInOrder(current->right); }
@@ -71,7 +69,7 @@ void BST::print() {
     cout << "\n";
 }
 
-Node *BST::search(Node *current, int value) {
+BinaryNode *BST::search(BinaryNode *current, int value) {
     if (current == NULL) { return NULL; }
     if (current->data == value) { return current; }
     if (current->data > value) {
@@ -81,6 +79,6 @@ Node *BST::search(Node *current, int value) {
     }
 }
 
-Node *BST::search(int value) {
+BinaryNode *BST::search(int value) {
     return BST::search(root, value);
 }
