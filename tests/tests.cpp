@@ -12,6 +12,7 @@
 #include "../binaryMaxHeap.cpp"
 #include "../linkedList.cpp"
 #include "../doubleLinkedList.cpp"
+#include "../queue.cpp"
 
 using namespace std;
 
@@ -226,6 +227,22 @@ void doubleLinkedListTest() {
     cout << "\n";
 }
 
+void queueTest() {
+    cout << "Queue \n";
+
+    Queue queue;
+    queue.enqueue(13);
+    queue.enqueue(12);
+    queue.enqueue(1);
+    queue.enqueue(25);
+
+    while (!queue.isEmpty()) {
+        cout << queue.dequeue() << " ";
+    }
+
+    cout << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -241,4 +258,5 @@ int main() {
     heapSortTest();
     linkedListTest();
     doubleLinkedListTest();
+    queueTest();
 }

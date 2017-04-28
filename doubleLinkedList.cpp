@@ -26,8 +26,12 @@ public:
 
     void deleteFront();
 
-private:
+    bool isEmpty();
 };
+
+bool DoubleLinkedList::isEmpty() {
+    return (head == NULL);
+}
 
 void DoubleLinkedList::insertFront(int value) {
     DoubleLinkedListNode *node = new DoubleLinkedListNode(value, head, NULL);
