@@ -11,6 +11,7 @@
 #include "../binarySearchTree.cpp"
 #include "../binaryMaxHeap.cpp"
 #include "../linkedList.cpp"
+#include "../doubleLinkedList.cpp"
 
 using namespace std;
 
@@ -206,6 +207,25 @@ void linkedListTest() {
     cout << "\n";
 }
 
+void doubleLinkedListTest() {
+    cout << "Double Linked list \n";
+
+    DoubleLinkedList list;
+    list.insertFront(13);
+    list.insertFront(0);
+    list.insertFront(19);
+    list.insertFront(121);
+    list.deleteFront();
+
+    DoubleLinkedListNode *current = list.head;
+    while (current != NULL) {
+        cout << current->data << " ";
+        current = current->next;
+    }
+
+    cout << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -220,4 +240,5 @@ int main() {
     binaryMaxHeapTest();
     heapSortTest();
     linkedListTest();
+    doubleLinkedListTest();
 }
