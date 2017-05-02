@@ -16,6 +16,7 @@
 #include "../queue.cpp"
 #include "../graph.h"
 #include "../breadthFirstSearch.cpp"
+#include "../depthFirstSearch.cpp"
 
 using namespace std;
 
@@ -131,9 +132,12 @@ void stackTest() {
     Stack s;
 
     s.push(4);
+    s.pop();
     s.push(3);
     s.push(0);
     s.push(10);
+
+    cout << "Stack \n";
 
     while (!s.isEmpty()) {
         cout << s.pop() << " ";
@@ -250,11 +254,11 @@ void breadthFirstSearchTest() {
     cout << "Breadth-first Search (BFS) \n";
 
     Graph graph = {{
-            {0, 1, 1, 0, 1},
-            {0, 0, 0, 1, 1},
-            {0, 0, 0, 1, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0}
+        {0, 1, 1, 0, 1},
+        {0, 0, 0, 1, 1},
+        {0, 0, 0, 1, 0},
+        {0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0}
     }};
 
     graph.printMatrix();
@@ -262,6 +266,22 @@ void breadthFirstSearchTest() {
     BFS(graph, 0);
     BFS(graph, 1);
     BFS(graph, 4);
+}
+
+void depthFirstSearchTest() {
+    cout << "Depth-first Search (DFS) \n";
+
+    Graph graph = {{
+        {0, 1, 1, 0, 1},
+        {0, 0, 0, 1, 1},
+        {0, 0, 0, 1, 0},
+        {0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0}
+    }};
+
+    DFS(graph, 0);
+    DFS(graph, 1);
+    DFS(graph, 4);
 }
 
 int main() {
@@ -281,4 +301,5 @@ int main() {
     doubleLinkedListTest();
     queueTest();
     breadthFirstSearchTest();
+    depthFirstSearchTest();
 }

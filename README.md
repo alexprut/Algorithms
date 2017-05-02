@@ -19,6 +19,7 @@ Algorithms Implemented
 |[Bubble Sort](https://github.com/alexprut/Algorithms/blob/master/bubbleSort.cpp)|O(n^2)|O(n^2)|
 |[Heapsort](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp#L133)|O(nlogn)|O(nlogn)|
 |[Breadth-first Search (BFS)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch)|O(\|V\|+\|E\|)|O(\|V\|+\|E\|)|
+|[Depth-first Search (DFS)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch)|O(\|V\|+\|E\|)|O(\|V\|+\|E\|)|
 
 Data Structures Implemented
 ===========================
