@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include "../node.h"
 #include "../countingSort.cpp"
 #include "../mergeSort.cpp"
@@ -13,6 +14,8 @@
 #include "../linkedList.cpp"
 #include "../doubleLinkedList.cpp"
 #include "../queue.cpp"
+#include "../graph.h"
+#include "../breadthFirstSearch.cpp"
 
 using namespace std;
 
@@ -243,6 +246,24 @@ void queueTest() {
     cout << "\n";
 }
 
+void breadthFirstSearchTest() {
+    cout << "Breadth-first Search (BFS) \n";
+
+    Graph graph = {{
+            {0, 1, 1, 0, 1},
+            {0, 0, 0, 1, 1},
+            {0, 0, 0, 1, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0}
+    }};
+
+    graph.printMatrix();
+
+    BFS(graph, 0);
+    BFS(graph, 1);
+    BFS(graph, 4);
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -259,4 +280,5 @@ int main() {
     linkedListTest();
     doubleLinkedListTest();
     queueTest();
+    breadthFirstSearchTest();
 }
