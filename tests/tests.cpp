@@ -19,6 +19,7 @@
 #include "../graph.h"
 #include "../breadthFirstSearch.cpp"
 #include "../depthFirstSearch.cpp"
+#include "../prim.cpp"
 
 using namespace std;
 
@@ -294,6 +295,25 @@ void depthFirstSearchTest() {
     DFS(graph, 4);
 }
 
+void primTest() {
+    cout << "Prim (Minimum Spanning Tree) \n";
+
+    vector<vector<int>> matrix = {{
+        {0, 3, 1, 1},
+        {3, 0, 1, 9},
+        {1, 1, 0, 6},
+        {1, 9, 6, 0},
+    }};
+
+    vector<int> parent = prim(matrix);
+
+    for (int i = 0; i < parent.size(); i++) {
+        cout << parent[i] << " ";
+    }
+
+    cout << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -313,4 +333,5 @@ int main() {
     queueTest();
     breadthFirstSearchTest();
     depthFirstSearchTest();
+    primTest();
 }
