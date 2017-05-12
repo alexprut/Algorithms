@@ -10,7 +10,9 @@
 #include "../bubbleSort.cpp"
 #include "../stack.cpp"
 #include "../binarySearchTree.cpp"
+#include "../binaryHeap.h"
 #include "../binaryMaxHeap.cpp"
+#include "../binaryMinHeap.cpp"
 #include "../linkedList.cpp"
 #include "../doubleLinkedList.cpp"
 #include "../queue.cpp"
@@ -183,6 +185,14 @@ void binaryMaxHeapTest() {
     cout << "\n";
 }
 
+void binaryMinHeapTest() {
+    cout << "Binary Min Heap \n";
+
+    BinaryMinHeap minHeap({1, 4, 0, 123, 9, 2, 1, 12});
+
+    cout << "\n";
+}
+
 void heapSortTest() {
     cout << "Heapsort \n";
 
@@ -296,6 +306,7 @@ int main() {
     stackTest();
     binarySearchTreeTest();
     binaryMaxHeapTest();
+    binaryMinHeapTest();
     heapSortTest();
     linkedListTest();
     doubleLinkedListTest();
