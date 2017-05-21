@@ -14,7 +14,7 @@ Algorithms Implemented
 |[Insertion Sort](https://github.com/alexprut/Algorithms/blob/master/insertionSort.cpp)|O(n^2)|O(n^2)|
 |[Merge Sort](https://github.com/alexprut/Algorithms/blob/master/mergeSort.cpp)|Θ(nlogn)|Θ(nlogn)|
 |[QuickSort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)|O(nlogn)|O(n^2)|
-|[Counting Sort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)|||
+|[Counting Sort](https://github.com/alexprut/Algorithms/blob/master/quickSort.cpp)|O(n+k)|O(n+k)|
 |[Binary Search](https://github.com/alexprut/Algorithms/blob/master/binarySearch.cpp)|O(logn)|O(logn)|
 |[Bubble Sort](https://github.com/alexprut/Algorithms/blob/master/bubbleSort.cpp)|O(n^2)|O(n^2)|
 |[Heapsort](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp#L133)|O(nlogn)|O(nlogn)|

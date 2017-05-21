@@ -1,7 +1,3 @@
-#include <vector>
-
-using namespace std;
-
 void countingSort(vector<int> &numbers, int k) {
     vector<int> counting(k);
     vector<int> ordered(numbers.size());
