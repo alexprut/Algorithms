@@ -324,6 +324,8 @@ void disjointSetTest() {
 
     node1 = unionSets(node1, node2);
     node2 = unionSets(node1, node3);
+
+    cout << size(node2) << "\n";
 }
 
 int main() {

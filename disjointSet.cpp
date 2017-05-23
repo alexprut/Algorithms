@@ -1,6 +1,7 @@
 struct DisjointSetNode : Node {
     DisjointSetNode *parent;
     int rank = 0;
+    int size = 1;
 };
 
 DisjointSetNode *makeSet(int value) {
@@ -20,15 +21,26 @@ DisjointSetNode *unionSets(DisjointSetNode *firstNode, DisjointSetNode *secondNo
     DisjointSetNode *firstNodeParent = findSet(firstNode);
     DisjointSetNode *secondNodeParent = findSet(secondNode);
 
+    if (firstNodeParent == secondNodeParent) {
+        return firstNodeParent;
+    }
+
     if (firstNodeParent->rank > secondNodeParent->rank) {
         secondNodeParent->parent = firstNodeParent;
+        firstNodeParent->size += secondNodeParent->size;
         return firstNodeParent;
     }
 
     firstNodeParent->parent = secondNodeParent;
+    secondNodeParent->size += firstNodeParent->size;
     if (firstNodeParent->rank == secondNodeParent->rank) {
         secondNodeParent->rank += 1;
     }
 
     return secondNodeParent;
+}
+
+int size(DisjointSetNode* node) {
+    DisjointSetNode* parent = findSet(node);
+    return parent->size;
 }
