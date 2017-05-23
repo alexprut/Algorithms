@@ -21,6 +21,7 @@
 #include "../depthFirstSearch.cpp"
 #include "../prim.cpp"
 #include "../disjointSet.cpp"
+#include "../kruskal.cpp"
 
 using namespace std;
 
@@ -328,6 +329,19 @@ void disjointSetTest() {
     cout << size(node2) << "\n";
 }
 
+void kruskalTest() {
+    cout << "Kruskal \n";
+
+    vector<vector<int>> matrix = {{
+        {0, 2, 3, 0},
+        {0, 0, 0, 4},
+        {0, 0, 0, 1},
+        {0, 0, 0, 0},
+    }};
+
+    vector<pair<int, int>> result = kruskal(matrix);
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -349,4 +363,5 @@ int main() {
     depthFirstSearchTest();
     primTest();
     disjointSetTest();
+    kruskalTest();
 }

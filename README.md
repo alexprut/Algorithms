@@ -18,9 +18,10 @@ Algorithms Implemented
 |[Binary Search](https://github.com/alexprut/Algorithms/blob/master/binarySearch.cpp)|O(logn)|O(logn)|
 |[Bubble Sort](https://github.com/alexprut/Algorithms/blob/master/bubbleSort.cpp)|O(n^2)|O(n^2)|
 |[Heapsort](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp#L133)|O(nlogn)|O(nlogn)|
-|[Breadth-first Search (BFS)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch)|O(\|V\|+\|E\|)|O(\|V\|+\|E\|)|
-|[Depth-first Search (DFS)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch)|O(\|V\|+\|E\|)|O(\|V\|+\|E\|)|
-|[Prim (MST)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch)|O(\|E\|log\|V\|)|O(\|E\|log\|V\|)|
+|[Breadth-first Search (BFS)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch.cpp)|O(\|V\|+\|E\|)|O(\|V\|+\|E\|)|
+|[Depth-first Search (DFS)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch.cpp)|O(\|V\|+\|E\|)|O(\|V\|+\|E\|)|
+|[Prim (MST)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch.cpp)|O(\|E\|log\|V\|)|O(\|E\|log\|V\|)|
+|[Kruskal (MST)](https://github.com/alexprut/Algorithms/blob/master/kruskal.cpp)|O(\|E\|log\|V\|)|O(\|E\|log\|V\|)|
 
 Data Structures Implemented
 ===========================
