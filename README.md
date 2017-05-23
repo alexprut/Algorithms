@@ -33,6 +33,7 @@ Data Structures Implemented
 |[Binary Search Tree (BST)](https://github.com/alexprut/Algorithms/blob/master/binarySearchTree.cpp)|```insert(int value)``` - Θ(n), ```search(int value)``` - Θ(n), ```printInOrder()``` - Θ(n), ```printPreOrder()``` - Θ(n), ```printPostOrder()``` - Θ(n)|
 |[Heap (binary max heap)](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp)|```heapify(int index)``` - O(logn), ```insert(int value)``` - O(logn), ```deleteMax()``` - O(logn), ```buildHeap(vector<int> values)``` - O(n), ```heapSort()``` - O(nlogn)|
 |[Heap (binary min heap)](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp)|```heapify(int index)``` - O(logn), ```insert(int value)``` - O(logn), ```deleteMin()``` - O(logn), ```buildHeap(vector<int> values)``` - O(n), ```heapSort()``` - O(nlogn)|
+|[Disjoint Set](https://github.com/alexprut/Algorithms/blob/master/disjointSet.cpp)|```makeSet()``` - Θ(1), ```findSet()``` - Θ(1), ```union()``` - Θ(1)|
 
 License
 =======

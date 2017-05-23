@@ -20,6 +20,7 @@
 #include "../breadthFirstSearch.cpp"
 #include "../depthFirstSearch.cpp"
 #include "../prim.cpp"
+#include "../disjointSet.cpp"
 
 using namespace std;
 
@@ -314,6 +315,17 @@ void primTest() {
     cout << "\n";
 }
 
+void disjointSetTest() {
+    cout << "Disjoint Set \n";
+
+    DisjointSetNode *node1 = makeSet(1);
+    DisjointSetNode *node2 = makeSet(2);
+    DisjointSetNode *node3 = makeSet(3);
+
+    node1 = unionSets(node1, node2);
+    node2 = unionSets(node1, node3);
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -334,4 +346,5 @@ int main() {
     breadthFirstSearchTest();
     depthFirstSearchTest();
     primTest();
+    disjointSetTest();
 }
