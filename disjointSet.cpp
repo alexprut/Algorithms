@@ -15,6 +15,7 @@ DisjointSetNode *makeSet(int value) {
 DisjointSetNode *findSet(DisjointSetNode *node) {
     if (node->parent == node) { return node; }
     node->parent = findSet(node->parent);
+    return node->parent;
 }
 
 DisjointSetNode *unionSets(DisjointSetNode *firstNode, DisjointSetNode *secondNode) {
