@@ -22,6 +22,7 @@ Algorithms Implemented
 |[Depth-first Search (DFS)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch.cpp)|O(\|V\|+\|E\|)|O(\|V\|+\|E\|)|
 |[Prim (MST)](https://github.com/alexprut/Algorithms/blob/master/breadthFirstSearch.cpp)|O(\|E\|log\|V\|)|O(\|E\|log\|V\|)|
 |[Kruskal (MST)](https://github.com/alexprut/Algorithms/blob/master/kruskal.cpp)|O(\|E\|log\|V\|)|O(\|E\|log\|V\|)|
+|[Bellman-Ford](https://github.com/alexprut/Algorithms/blob/master/bellmanFord.cpp)|O(\|E\|\|V\|)|O(\|E\|\|V\|)|
 
 Data Structures Implemented
 ===========================

@@ -22,6 +22,7 @@
 #include "../prim.cpp"
 #include "../disjointSet.cpp"
 #include "../kruskal.cpp"
+#include "../bellmanFord.cpp"
 
 using namespace std;
 
@@ -342,6 +343,46 @@ void kruskalTest() {
     vector<pair<int, int>> result = kruskal(matrix);
 }
 
+void bellmanFordTest() {
+    cout << "Bellman-Ford \n";
+
+    // TODO parametric linked list which contains the weight value (i.e. pair<int,int>)
+    vector<LinkedList *> adjacency(5);
+    for (int k = 0; k < adjacency.size(); k++) {
+        adjacency[k] = new LinkedList();
+    }
+    adjacency[0]->insertFront(1);
+    adjacency[0]->insertFront(2);
+    adjacency[1]->insertFront(4);
+    adjacency[1]->insertFront(3);
+    adjacency[2]->insertFront(4);
+    adjacency[3]->insertFront(2);
+    adjacency[4]->insertFront(3);
+
+    vector<vector<int>> matrix = {{
+        {0, 1, 1, 0, 0},
+        {0, 0, 0, 2, 1},
+        {0, 0, 0, 0, 4},
+        {0, 0, 1, 0, 0},
+        {0, 0, 0, 1, 0},
+    }};
+
+    // Test without negative cycles
+    pair<vector<int>, vector<int>> result = bellmanFord(adjacency, matrix, 0);
+
+    // Test with negative cycles
+    matrix = {{
+        {0, 1, 1, 0, 0},
+        {1, 0, 0, 2, 1},
+        {0, -9, 0, 0, 4},
+        {0, 0, 1, 0, 0},
+        {0, 0, 0, 1, 0},
+    }};
+    adjacency[1]->insertFront(0);
+    adjacency[2]->insertFront(1);
+    result = bellmanFord(adjacency, matrix, 0);
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -364,4 +405,5 @@ int main() {
     primTest();
     disjointSetTest();
     kruskalTest();
+    bellmanFordTest();
 }

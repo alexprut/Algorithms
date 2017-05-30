@@ -1,8 +1,4 @@
 struct LinkedListNode : Node {
-    LinkedListNode() {
-        next = NULL;
-    }
-
     LinkedListNode(int value, LinkedListNode *nextNode);
 
     LinkedListNode *next;
