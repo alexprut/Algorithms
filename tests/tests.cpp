@@ -23,6 +23,7 @@
 #include "../disjointSet.cpp"
 #include "../kruskal.cpp"
 #include "../bellmanFord.cpp"
+#include "../dijkstra.cpp"
 
 using namespace std;
 
@@ -113,11 +114,20 @@ void countingSortTest() {
 
 void binarySearchTest() {
     vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8};
+    vector<int> numbers2 = {
+        1, 2, 6, 7,9, 10, 11, 12, 14, 15, 17, 19, 24, 25,
+        30, 39, 40, 44, 46, 48, 51, 53, 54, 56, 59, 60, 69,
+        70, 73, 75, 80, 87, 88, 89, 92, 93, 97, 99, 104, 107,
+        109, 110, 111, 117, 123, 124, 125, 126, 127, 128, 135,
+        136, 137, 141, 148, 153, 154, 161, 166, 167, 169, 175,
+        177, 180, 181, 182, 185, 186, 189, 193, 198, 202
+    };
 
     cout << "BinarySearch \n";
 
     cout << binarySearch(numbers, 3) << "\n";
     cout << binarySearch(numbers, 11) << "\n";
+    cout << binarySearch(numbers2, 198) << "\n";
 }
 
 void bubbleSortTest() {
@@ -383,6 +393,33 @@ void bellmanFordTest() {
     result = bellmanFord(adjacency, matrix, 0);
 }
 
+void dijkstraTest() {
+    cout << "Dijkstra \n";
+
+    // TODO parametric linked list which contains the weight value (i.e. pair<int,int>)
+    vector<LinkedList *> adjacency(5);
+    for (int k = 0; k < adjacency.size(); k++) {
+        adjacency[k] = new LinkedList();
+    }
+    adjacency[0]->insertFront(1);
+    adjacency[0]->insertFront(2);
+    adjacency[1]->insertFront(4);
+    adjacency[1]->insertFront(3);
+    adjacency[2]->insertFront(4);
+    adjacency[3]->insertFront(2);
+    adjacency[4]->insertFront(3);
+
+    vector<vector<int>> matrix = {{
+        {0, 1, 1, 0, 0},
+        {0, 0, 0, 2, 1},
+        {0, 0, 0, 0, 4},
+        {0, 0, 1, 0, 0},
+        {0, 0, 0, 1, 0},
+    }};
+
+    pair<vector<int>, vector<int>> result = dijkstra(adjacency, matrix, 0);
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -406,4 +443,5 @@ int main() {
     disjointSetTest();
     kruskalTest();
     bellmanFordTest();
+    dijkstraTest();
 }

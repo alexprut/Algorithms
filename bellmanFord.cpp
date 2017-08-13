@@ -41,4 +41,4 @@ pair<vector<int>, vector<int>> bellmanFord(vector<LinkedList *> &adjacency, vect
     }
 
     return make_pair(parent, pathCost);
-};
+}
