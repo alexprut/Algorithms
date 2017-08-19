@@ -24,6 +24,7 @@
 #include "../kruskal.cpp"
 #include "../bellmanFord.cpp"
 #include "../dijkstra.cpp"
+#include "../trie.cpp"
 
 using namespace std;
 
@@ -420,6 +421,17 @@ void dijkstraTest() {
     pair<vector<int>, vector<int>> result = dijkstra(adjacency, matrix, 0);
 }
 
+void trieTest() {
+    cout << "Trie \n";
+
+    Trie *t = new Trie;
+    t->add("h");
+    t->add("hac");
+    t->add("hack");
+    t->add("er");
+    cout << t->countPartialFind("ha") << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -444,4 +456,5 @@ int main() {
     kruskalTest();
     bellmanFordTest();
     dijkstraTest();
+    trieTest();
 }

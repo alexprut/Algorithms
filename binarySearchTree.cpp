@@ -22,7 +22,6 @@ private:
     BinaryNode *search(BinaryNode *current, int value);
 };
 
-
 BinaryNode *BST::createNode(int value) {
     BinaryNode *node = new BinaryNode;
     node->data = value;
