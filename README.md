@@ -1,10 +1,13 @@
-Algorithms
-==========
-[![MIT](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/alexprut/Algorithms/blob/master/LICENSE)
+<div align="center">
+<img src="https://github.com/alexprut/Algorithms/raw/master/logo.png" width="400" height="auto"/>
+<h1>Algorithms and Data Structures</h1>
 
-Classic Algorithms and Data Structures implemented in C++
+[![MIT](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/alexprut/design-patterns-java/blob/master/LICENSE)
+<p>Classic Algorithms and Data Structures implemented in C++</p>
 
 _Code written for practice. During my Master's degree in Computer Science at the University of Udine._
+</div>
+<br />
 
 Algorithms Implemented
 ======================
