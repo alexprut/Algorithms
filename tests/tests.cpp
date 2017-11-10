@@ -25,6 +25,7 @@
 #include "../bellmanFord.cpp"
 #include "../dijkstra.cpp"
 #include "../trie.cpp"
+#include "../maxSubArray.cpp"
 
 using namespace std;
 
@@ -432,6 +433,13 @@ void trieTest() {
     cout << t->countPartialFind("ha") << "\n";
 }
 
+void maxSubArrayTest() {
+    cout << "Maximum subarray \n";
+
+    int arr[] = {1, -1, 2, 4, 5};
+    cout << maxSubArray(arr, 5) << "\n";
+}
+
 int main() {
     insertionSortEmptyTest();
     insertionSortRandomNonOrderedTest();
@@ -457,4 +465,5 @@ int main() {
     bellmanFordTest();
     dijkstraTest();
     trieTest();
+    maxSubArrayTest();
 }
