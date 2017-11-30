@@ -2,6 +2,7 @@
 <img src="https://github.com/alexprut/Algorithms/raw/master/logo.png" width="400" height="auto"/>
 <h1>Algorithms and Data Structures</h1>
 
+[![Code Style](https://img.shields.io/badge/code%20style-google-green.svg?style=flat-square)](https://google.github.io/styleguide/cppguide.html)
 [![MIT](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/alexprut/design-patterns-java/blob/master/LICENSE)
 <p>Classic Algorithms and Data Structures implemented in C++</p>
 

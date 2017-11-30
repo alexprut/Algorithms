@@ -1,58 +1,58 @@
-class BinaryMinHeap : public BinaryHeap {
-public:
-    BinaryMinHeap() { }
+class BinaryMinHeap: public BinaryHeap {
+ public:
+  BinaryMinHeap() { }
 
-    BinaryMinHeap(vector<int> values) {
-        buildHeap(values);
-    }
+  BinaryMinHeap(vector<int> values) {
+    buildHeap(values);
+  }
 
-    int findMin();
+  int findMin();
 
-    void deleteMin();
+  void deleteMin();
 
-    void insertHeapify(int index);
+  void insertHeapify(int index);
 
-    void heapify(int index);
+  void heapify(int index);
 
-private:
+ private:
 };
 
 int BinaryMinHeap::findMin() {
-    return (size() != 0) ? data[0] : -1;
+  return (size() != 0) ? data[0] : -1;
 }
 
 void BinaryMinHeap::insertHeapify(int index) {
-    if (hasParent(index) && data[parent(index)] > data[index]) {
-        int tmp = data[index];
-        data[index] = data[parent(index)];
-        data[parent(index)] = tmp;
-        insertHeapify(parent(index));
-    }
+  if (hasParent(index) && data[parent(index)] > data[index]) {
+    int tmp = data[index];
+    data[index] = data[parent(index)];
+    data[parent(index)] = tmp;
+    insertHeapify(parent(index));
+  }
 }
 
 void BinaryMinHeap::heapify(int index) {
-    int min = index;
+  int min = index;
 
-    if (hasLeft(index) && data[index] > data[left(index)]) {
-        min = left(index);
-    }
+  if (hasLeft(index) && data[index] > data[left(index)]) {
+    min = left(index);
+  }
 
-    if (hasRight(index) && data[min] > data[right(index)]) {
-        min = right(index);
-    }
+  if (hasRight(index) && data[min] > data[right(index)]) {
+    min = right(index);
+  }
 
-    if (min != index) {
-        int tmp = data[index];
-        data[index] = data[min];
-        data[min] = tmp;
-        heapify(min);
-    }
+  if (min != index) {
+    int tmp = data[index];
+    data[index] = data[min];
+    data[min] = tmp;
+    heapify(min);
+  }
 }
 
 void BinaryMinHeap::deleteMin() {
-    if (!isEmpty()) {
-        data[0] = data[size() - 1];
-        data.pop_back();
-        heapify(0);
-    }
+  if (!isEmpty()) {
+    data[0] = data[size() - 1];
+    data.pop_back();
+    heapify(0);
+  }
 }

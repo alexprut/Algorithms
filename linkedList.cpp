@@ -1,34 +1,34 @@
-struct LinkedListNode : Node {
-    LinkedListNode(int value, LinkedListNode *nextNode);
+struct LinkedListNode: Node {
+  LinkedListNode(int value, LinkedListNode *nextNode);
 
-    LinkedListNode *next;
+  LinkedListNode *next;
 };
 
 LinkedListNode::LinkedListNode(int value, LinkedListNode *nextNode) {
-    next = nextNode;
-    data = value;
+  next = nextNode;
+  data = value;
 }
 
 class LinkedList {
-public:
-    LinkedListNode *head = NULL;
+ public:
+  LinkedListNode *head = NULL;
 
-    LinkedList() { }
+  LinkedList() { }
 
-    void insertFront(int value);
+  void insertFront(int value);
 
-    void deleteFront();
+  void deleteFront();
 
-private:
+ private:
 };
 
 void LinkedList::insertFront(int value) {
-    LinkedListNode *node = new LinkedListNode(value, head);
-    head = node;
+  LinkedListNode *node = new LinkedListNode(value, head);
+  head = node;
 }
 
 void LinkedList::deleteFront() {
-    LinkedListNode *tmp = head->next;
-    delete head;
-    head = tmp;
+  LinkedListNode *tmp = head->next;
+  delete head;
+  head = tmp;
 }
