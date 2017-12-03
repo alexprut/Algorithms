@@ -340,6 +340,12 @@ void disjointSetTest() {
   node2 = unionSets(node1, node3);
 
   cout << size(node2) << "\n";
+
+  DisjointSets sets(3);
+  sets.unionSets(0, 2);
+  sets.unionSets(0, 1);
+
+  cout << sets.getSize(0) << "\n";
 }
 
 void kruskalTest() {
