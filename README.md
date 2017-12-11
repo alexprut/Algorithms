@@ -42,7 +42,7 @@ Data Structures Implemented
 |[Heap (binary max heap)](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp)|```heapify(int index)``` - O(logn), ```insert(int value)``` - O(logn), ```deleteMax()``` - O(logn), ```buildHeap(vector<int> values)``` - O(n), ```heapSort()``` - O(nlogn)|
 |[Heap (binary min heap)](https://github.com/alexprut/Algorithms/blob/master/binaryMaxHeap.cpp)|```heapify(int index)``` - O(logn), ```insert(int value)``` - O(logn), ```deleteMin()``` - O(logn), ```buildHeap(vector<int> values)``` - O(n), ```heapSort()``` - O(nlogn)|
 |[Disjoint Set](https://github.com/alexprut/Algorithms/blob/master/disjointSet.cpp)|```makeSet()``` - Θ(1), ```findSet()``` - Θ(1), ```union()``` - Θ(1)|
-|[Trie](https://github.com/alexprut/Algorithms/blob/master/tire.cpp)|```add()``` - , ```find()``` - |
+|[Trie](https://github.com/alexprut/Algorithms/blob/master/trie.cpp)|```add()``` - O(\|string\|), ```find()``` - O(\|string\|)|
 
 License
 =======
